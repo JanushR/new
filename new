@@ -16,3 +16,39 @@ int main() {
 
     return 0;
 }
+#include <stdio.h>
+
+// Define constants using #define
+#define BASE_SALARY 20000.0
+#define HRA 5000.0
+#define TAX_RATE 0.10 // 10%
+
+int main() {
+    // Or define constants using const
+    // const float BASE_SALARY = 20000.0f;
+    // const float HRA = 5000.0f;
+    // const float TAX_RATE = 0.10f; // 10%
+
+    float gross_salary;
+    float tax_amount;
+    float net_salary;
+
+    // Calculate gross salary
+    gross_salary = BASE_SALARY + HRA;
+
+    // Calculate tax amount
+    tax_amount = gross_salary * TAX_RATE;
+
+    // Calculate net salary
+    net_salary = gross_salary - tax_amount;
+
+    // Display results
+    printf("Base Salary: %.2f\n", BASE_SALARY);
+    printf("HRA: %.2f\n", HRA);
+    printf("Gross Salary: %.2f\n", gross_salary);
+    printf("Tax Rate: %.0f%%\n", TAX_RATE * 100);
+    printf("Tax Amount: %.2f\n", tax_amount);
+    printf("Net Salary: %.2f\n", net_salary);
+
+    return 0;
+}
