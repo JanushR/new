@@ -1,3 +1,18 @@
-new barnch
-hi...
-hello ..
+#include <stdio.h>
+
+int main() {
+    int temperature;
+
+    // Prompt user for temperature input
+    printf("Enter the temperature (integer): ");
+    scanf("%d", &temperature);
+
+    // Categorize temperature using ternary operator
+    const char *category = (temperature < 15) ? "Cold" :
+                           (temperature <= 30) ? "Normal" : "Hot";
+
+    // Display the category
+    printf("Temperature is: %s\n", category);
+
+    return 0;
+}
